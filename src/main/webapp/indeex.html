@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	body {
+			background-color: cyan;
+		}
+	.center {
+	
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height:80vh;
+		
+	}
+	.box {
+			border: 2px solid black;
+			padding: 50px;
+			
+		}
+</style>
+</head>
+<body>
+ <div class="center">
+ <div class="box">
+    <form
+      name="f1"
+      action="/chat/ch"
+      onsubmit="return matchpass()"
+      method="post"
+     
+    
+    >
+      Username:<input type="text" name="t1" ><br />
+      Password: <input type="password" name="pass" ><br />
+      </br>
+      <input type="submit" value="login" >
+      
+      <button type="submit" id="lgn">Sig-up</button> 
+    </form>
+    </div>
+    </div>
+<script type="text/javascript">
+      function matchpass() {
+        var firstpassword = document.f1.t1.value;
+        var secondpassword = document.f1.pass.value;
+
+        if (firstpassword == null || firstpassword== ' ') {
+            alert("plesse enter value!");
+            return false;
+        } else if(secondpassword==null || secondpassword==' ') {
+          alert("please enter password!");
+          return false;
+        }
+        else {
+            return true;
+        }
+      }
+      document.getElementById('lgn').addEventListener('click', (e) => {
+          e.preventDefault();
+          document.location.href = 'sigin.html';
+        })
+    </script>
+
+
+</body>
+</html>
